@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex align</title>
+    <style>
+        #container{
+            display: flex;
+            flex-wrap: wrap;
+            /* align items horizontal */
+            justify-content: flex-start;
+
+            /* 
+            OPTIONS:
+            flex-start
+            slex-end
+            center
+            space-between
+            space-around
+            space-evenly */
+            background: #555555;
+            height: 600px;
+            /* align items vertical(must be a height) */
+            align-items: baseline;
+            /* 
+            options:
+            flex-start
+            flex-end
+            center
+            baseline
+            stretch */
+
+
+            /* align items vertical where there is extra space */
+            align-content: flex-start;
+            /* 
+            options
+            flex-start
+            flex-end
+            center
+            space-between
+            space-around
+            strech*/
+        }
+
+        .item-2{
+            /* align single item vertical */
+            align-self: flex-end;
+            /* options 
+             flex-start
+            flex-end
+            center
+            baseline
+            stretch
+
+            */
+            order: 2;
+        }
+        .item-3{
+            order:1;
+        }
+        .item{
+            background: #f4f4f4;
+            border: #ccc solid 1px;
+            text-align:center ;
+            padding:1rem;
+            margin:0.5rem;
+            /* width: 300px; */
+            float: basis 200px;
+        }
+        .item-1{
+            order:3;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="item item-1"><h3></h3></div>
+    <div class="item item-2"><h3></h3></div>
+    <div class="item item-3"><h3></h3></div>
+</div>
+</body>
+</html>
